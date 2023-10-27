@@ -3,22 +3,35 @@ function validarFormulario() {
     var correoElectronico = document.getElementById("correo_electronico").value;
     var contrasena = document.getElementById("contrasena").value;
     var confirmarContrasena = document.getElementById("confirmar_contrasena").value;
+    var checkbox = document.getElementById("aceptar_terminos");
 
-    if (nombreUsuario === "" || correoElectronico === "" || contrasena === "" || confirmarContrasena === "") {
+    switch(true){
 
-        alert("Todos los campos son obligatorios. Por favor, rellénelos.");
+        case(nombreUsuario === "" || correoElectronico === "" || contrasena === "" || confirmarContrasena === ""):
 
-    }else if(!validarCorreoElectronico(correoElectronico)){
+            alert("Todos los campos son obligatorios. Por favor, rellénelos.");
+            break;
 
-        alert("El correo escogido no cumple los criterios adecuados")
+        case(!validarCorreoElectronico(correoElectronico)):
 
-    }else if (contrasena !== confirmarContrasena) {
+            alert("El correo escogido no cumple los criterios adecuados");
+            break;
 
-        alert("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+        case(contrasena !== confirmarContrasena):
 
-    }else if (!validarContrasena(contrasena)){
+            alert("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+            break;
 
-        alert("La contraseña escogida no es segura");
+        case(!validarContrasena(contrasena)):
+
+            alert("La contraseña escogida no es segura");
+            break;
+
+        case(!validarCheckbox(checkbox)):
+
+            alert("Debes aceptar los términos y condiciones.");
+            break;
+
 
     }
 
@@ -44,4 +57,15 @@ function validarCorreoElectronico(correo) {
     var expresionRegular = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     return expresionRegular.test(correo);
+}
+
+function validarCheckbox(checkbox) {
+
+    if (checkbox.checked) {
+        // El checkbox ha sido marcado, el formulario puede enviarse
+        return true;
+    } else {
+        // El checkbox no ha sido marcado, muestra un mensaje de advertencia
+        return false;
+    }
 }
