@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado (header) */
+h2 {
+    background-color: #272829;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Estilos para el formulario */
+form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+textarea {
+    font-size: medium;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para el botón de envío */
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block; /* Ensure the button doesn't take full width */
+}
+
+/* Cambiar el color del botón al pasar el mouse por encima */
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilos para los botones de la página de inicio */
+body > a > button {
+    display: block;
+    margin: 10px auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Cambiar el color del botón al pasar el mouse por encima */
+body > a > button:hover {
+    background-color: #555;
+}
