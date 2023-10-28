@@ -5,6 +5,33 @@ body {
     padding: 0;
 }
 
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: #bebebe;
+}
+
+h1 {
+    background-color: #272829;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
 /* Estilos para el encabezado (header) */
 h2 {
     background-color: #272829;
@@ -34,6 +61,58 @@ input[type="email"],
 input[type="text"],
 input[type="tel"],
 input[type="password"],
+#genero {
+    font-size: medium;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Establece un estilo cuando el usuario coloca el mouse sobre el campo */
+select#genero:hover {
+    border-color: #555;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/*Los tres siguientes estilos los ha creado chatgpt porque no sabía como centrar el checkbox*/
+
+/* Estilo para el checkbox oculto */
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo para el elemento personalizado del checkbox */
+.checkbox-container input[type="checkbox"] + label::before {
+    content: "\2610"; /* Código Unicode para un cuadro en blanco (checkbox no seleccionado) */
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* Estilo para el checkbox seleccionado */
+.checkbox-container input[type="checkbox"]:checked + label::before {
+    content: "\2611"; /* Código Unicode para un cuadro marcado (checkbox seleccionado) */
+}
+
+/* Estilos para el botón de envío */
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Cambiar el color del botón al pasar el mouse por encima */
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
 textarea {
     font-size: medium;
     width: 100%;
