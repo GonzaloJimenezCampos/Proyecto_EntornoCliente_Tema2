@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Página de Contacto</title>
-    <script src="script.js"></script>
+    <script src="../js/Validacion.js"></script>
 </head>
 <body>
     
@@ -15,22 +15,22 @@
 
         <!-- Campo de DNI -->
         <label for="dni">DNI:</label>
-        <input type="text" id="dni" name="dni" pattern="[0-9]{8}" required>
+        <input type="text" id="dni" name="dni" required>
         <br>
 
         <!-- Campo de Teléfono -->
         <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+        <input type="tel" id="telefono" name="telefono" required>
         <br>
 
         <!-- Campo de Código Postal -->
         <label for="codigo-postal">Código Postal:</label>
-        <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}" required>
+        <input type="text" id="codigo-postal" name="codigo-postal" required>
         <br>
 
         <!-- Campo de Dirección -->
         <label for="direccion">Dirección:</label>
-        <textarea id="direccion" name="direccion" rows="4" required></textarea>
+        <textarea id="direccion" name="direccion" required></textarea>
         <br>
 
         <!-- Botón de Enviar -->
